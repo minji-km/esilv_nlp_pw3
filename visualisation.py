@@ -3,9 +3,7 @@ pd.options.mode.chained_assignment = None
 import numpy as np
 import re
 import nltk
-
 from gensim.models import word2vec
-
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 #matplotlib inline
