@@ -67,40 +67,38 @@ for i in range(0,len(model.wv)):
 
 
 
-def tsne_plot(model):
-    "Creates and TSNE model and plots it"
-    labels = []
-    tokens = []
+# def tsne_plot(model):
+#     "Creates and TSNE model and plots it"
+#     labels = []
+#     tokens = []
 
-    for word in vocab:
-        tokens.append(model.wv[word])
-        labels.append(word)
-        #print(tokens)
-        #print(labels)
-    tokens = np.array(tokens)
-    tsne_model = TSNE(perplexity=40, n_components=2, init='pca', n_iter=2500, random_state=23)
-    new_values = tsne_model.fit_transform(tokens)
+#     for word in vocab:
+#         tokens.append(model.wv[word])
+#         labels.append(word)
+#         #print(tokens)
+#         #print(labels)
+#     tokens = np.array(tokens)
+#     tsne_model = TSNE(perplexity=40, n_components=2, init='pca', n_iter=2500, random_state=23)
+#     new_values = tsne_model.fit_transform(tokens)
 
-
-    
-    x = []
-    y = []
-    for value in new_values:
-        x.append(value[0])
-        y.append(value[1])
+#     x = []
+#     y = []
+#     for value in new_values:
+#         x.append(value[0])
+#         y.append(value[1])
     
     
     
-    plt.figure(figsize=(16, 16)) 
-    for i in range(len(x)):
-        plt.scatter(x[i],y[i])
-        plt.annotate(labels[i],
-                     xy=(x[i], y[i]),
-                     xytext=(5, 2),
-                     textcoords='offset points',
-                     ha='right',
-                     va='bottom')
-    plt.show()
+#     plt.figure(figsize=(16, 16)) 
+#     for i in range(len(x)):
+#         plt.scatter(x[i],y[i])
+#         plt.annotate(labels[i],
+#                      xy=(x[i], y[i]),
+#                      xytext=(5, 2),
+#                      textcoords='offset points',
+#                      ha='right',
+#                      va='bottom')
+#     plt.show()
 
-fig = tsne_plot(model)
-st.pyplot(fig)
+# fig = tsne_plot(model)
+# st.pyplot(fig)
