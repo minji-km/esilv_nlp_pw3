@@ -8,7 +8,7 @@ data = visualisation.data
 st.write(data.head(5))
 
 # Construire le corpus
-corpus = visualisation.build_corpus(data)
+corpus = visualisation.corpus
 
 # Afficher les 2 premiers éléments du corpus
 st.write(corpus[0:2])
