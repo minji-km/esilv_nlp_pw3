@@ -52,9 +52,9 @@ def build_corpus(data):
 
 st.write(data.head(5))
 
-corpus = build_corpus(data)
+# corpus = build_corpus(data)
 
-st.write(corpus[0:2])
+# st.write(corpus[0:2])
 
 
 # model = word2vec.Word2Vec(corpus, vector_size=100, window=20, min_count=200, workers=4)
